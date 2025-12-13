@@ -1,0 +1,24 @@
+### CRIAÇÃO DE USUÁRIO (POST)
+POST http://localhost:8080/usuarios
+Content-Type: application/json
+
+{
+    "nome": "Lucas Bobato",
+    "email": "lucas@teste.com",
+    "senha": "123",
+    "tipoPlano": "PREMIUM"
+}
+
+### LISTAGEM DE USUÁRIOS (GET)
+GET http://localhost:8080/usuarios
+
+### CRIAÇÃO DE CATEGORIA (POST)
+POST http://localhost:8080/categorias
+Content-Type: application/json
+
+{
+    "nome": "Lazer"
+}
+
+### LISTAGEM DE CATEGORIAS (GET)
+GET http://localhost:8080/categorias
