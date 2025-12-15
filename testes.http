@@ -17,8 +17,48 @@ POST http://localhost:8080/categorias
 Content-Type: application/json
 
 {
-    "nome": "Lazer"
+    "nome": "Alimentação"
 }
 
 ### LISTAGEM DE CATEGORIAS (GET)
 GET http://localhost:8080/categorias
+
+### CRIAÇÃO DE TRANSAÇÃO (POST)
+POST http://localhost:8080/transacoes
+Content-Type: application/json
+
+{
+    "descricao": "Hambúrguer",
+    "valor": 55.00,
+    "tipo": "DESPESA",
+    "data": "2025-12-15",
+    "usuario": {
+        "id": 1
+    },
+    "categoria": {
+        "id": 1
+    }
+}
+
+### Criação de receita (POST)
+POST http://localhost:8080/transacoes
+Content-Type: application/json
+
+{
+    "descricao": "Salário",
+    "valor": 2000.00,
+    "tipo": "RECEITA",
+    "data": "2025-12-15",
+    "usuario": {
+        "id": 1
+    },
+    "categoria": {
+        "id": 1
+    }
+}
+
+### LISTAR TRANSAÇÕES
+GET http://localhost:8080/transacoes
+
+### Dashboard de Transações por Usuário (GET)
+GET http://localhost:8080/transacoes/dashboard/1
