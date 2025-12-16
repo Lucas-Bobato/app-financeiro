@@ -30,6 +30,12 @@ public class TransacaoController {
         return transacaoRepository.save(transacao);
     }
 
+    // GET /transacoes/usuario/{id}
+    @GetMapping("/usuario/{idUsuario}")
+    public List<Transacao> listarPorUsuario(@PathVariable Long idUsuario) {
+        return transacaoRepository.findByUsuarioIdOrderByDataDesc(idUsuario);
+    }
+
     @GetMapping("/dashboard/{idUsuario}")
         public DashboardDTO getDashboard(@PathVariable Long idUsuario) {
             

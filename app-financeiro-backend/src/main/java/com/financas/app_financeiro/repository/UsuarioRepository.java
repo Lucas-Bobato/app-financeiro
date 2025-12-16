@@ -11,5 +11,11 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
   // Permite a criação de buscas personalizadas, ex:
   // Usuario findByEmail(String email);
+  
+  // Método para autenticação
+  Usuario findByEmailAndSenha(String email, String senha);
+  
+  // Método para verificar se email já existe
+  boolean existsByEmail(String email);
 
 }
